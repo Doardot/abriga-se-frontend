@@ -6,9 +6,7 @@ import { ConfigProvider } from "antd";
 import Router from "./router.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-
-  // <ConfigProvider>
-  //   <Router />
-  // </ConfigProvider>
-  <App></App>
+  <ConfigProvider>
+    <Router />
+  </ConfigProvider>
 );
