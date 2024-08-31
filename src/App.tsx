@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Header from './components/header/Header'
 import LoginPage from './components/header/loginPage/index.tsx'
+import { LandingPage } from './api/landing-page/pages/LandingPage'
+import ModalPessoas from './components/ModalPessoas'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,12 +13,10 @@ function App() {
   return (
 
     <div style={{ width: '100%' }}>
-      <LoginPage></LoginPage>
-
+      <LandingPage />
+      <ModalPessoas />
     </div>
-
-
   )
 }
 
-export default App
+export default App;
