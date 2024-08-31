@@ -27,12 +27,12 @@ export function LandingPage() {
             setFilteredPessoas([]); // Se o campo estiver vazio, definir lista vazia
         } else {
             const filtered = pessoas.filter((pessoa) =>
-                pessoa.nome.toLowerCase().includes(nome.toLowerCase())
+                pessoa.nome.toLowerCase() === nome.toLowerCase()
             );
             setFilteredPessoas(filtered);
         }
         setModalVisible(true);
-    };
+    }; 
 
     // Função para detectar a tecla Enter
     const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
