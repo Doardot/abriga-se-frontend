@@ -1,7 +1,6 @@
 import React from 'react';
 import { Modal, Button, Table } from 'antd';
 import { useNavigate } from 'react-router-dom';
-import pessoas from '../../api/api.json';
 
 interface Pessoa {
   key: string;
@@ -12,9 +11,10 @@ interface Pessoa {
 interface ModalPessoasProps {
   visible: boolean;
   setVisible: (visible: boolean) => void;
+  pessoas: Pessoa[];
 }
 
-const ModalPessoas: React.FC<ModalPessoasProps> = ({ visible, setVisible }) => {
+const ModalPessoas: React.FC<ModalPessoasProps> = ({ visible, setVisible, pessoas }) => {
   const navigate = useNavigate();
 
   const columns = [
