@@ -1,0 +1,41 @@
+.root {
+    margin: 0;
+    background-color: #ffffff;
+}
+
+.titulo {
+    color: black;
+    font-size: 4em;
+    font-weight: bold;
+    margin-top: '10%';
+    margin-bottom: 0;
+}
+
+.p{
+    margin-top: 0;
+}
+
+.h1{
+    margin-top: 0;
+}
+
+.subTitulo{
+    color: #595959; 
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.botao {
+    background-color: #40A9FF;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    padding: 1.5em 3em;
+}

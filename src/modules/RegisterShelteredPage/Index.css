@@ -1,0 +1,19 @@
+/* index.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.ant-form-item-label > label {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.ant-input, .ant-input-affix-wrapper {
+    padding: 10px;
+}
+
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+}
