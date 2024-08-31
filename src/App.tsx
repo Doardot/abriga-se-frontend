@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Header from './components/header/Header'
+import ModalPessoas from './components/ModalPessoas'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -10,7 +11,7 @@ function App() {
   return (
     
   <div style={{width: '100%'}}>
-    <Header></Header>
+    <ModalPessoas />
 
   </div>
     
