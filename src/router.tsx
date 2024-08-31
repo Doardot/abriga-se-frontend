@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AbrigoInfo from "./components/AbrigoInfo";
 import LoginPage from "./modules/loginPage";
 import { LandingPage } from "./modules/landing-page/pages/LandingPage";
-import RegisterPage from "./components/header/shelterRegistrationPage"
+import RegisterPage from "./modules/shelterRegistrationPage"
 
 
 function Router() {

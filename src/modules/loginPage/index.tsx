@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import './index.css';
 import { EyeInvisibleOutlined, EyeTwoTone, InfoCircleOutlined, UserOutlined, ArrowLeftOutlined } from '@ant-design/icons';
 import { Button, Input, Tooltip } from 'antd';
+import { useNavigate } from 'react-router-dom';
 
 const LoginPage: React.FC = () => {
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
     const [error, setError] = useState<string | null>(null);
+    const navigate = useNavigate();
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -23,7 +25,7 @@ const LoginPage: React.FC = () => {
 
     return (
         <div className="page-container">
-            <ArrowLeftOutlined className="back-arrow" onClick={() => console.log('Voltar clicado')} />
+            <ArrowLeftOutlined className="back-arrow" onClick={() => navigate('/')} />
             <div className="login-container">
 
                 <h2>Login</h2>

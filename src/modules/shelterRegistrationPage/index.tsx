@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './index.css';
-import { EyeInvisibleOutlined, EyeTwoTone, InfoCircleOutlined, UserOutlined, ArrowLeftOutlined } from '@ant-design/icons';
-import { Button, Input, Tooltip } from 'antd';
+import { EyeInvisibleOutlined, EyeTwoTone, ArrowLeftOutlined } from '@ant-design/icons';
+import { Button, Input } from 'antd';
+import { useNavigate } from 'react-router-dom';
 
 const RegisterPage: React.FC = () => {
     const [nome, setNome] = useState<string>('');
@@ -11,6 +12,7 @@ const RegisterPage: React.FC = () => {
     const [complemento, setComplemento] = useState<string>('');
     const [endereco, setEndereco] = useState<string>('');
     const [error, setError] = useState<string | null>(null);
+    const navigate = useNavigate();
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -18,13 +20,6 @@ const RegisterPage: React.FC = () => {
             setError('Todos os campos são obrigatórios');
             return;
         }
-        // Implementar a lógica para o registro aqui
-        console.log('Nome:', nome);
-        console.log('Email:', email);
-        console.log('Senha:', senha);
-        console.log('Número de telefone:', numero)
-        console.log('Endereço', endereco)
-        console.log('complemento', complemento)
         setNome('');
         setEmail('');
         setSenha('');
@@ -36,7 +31,7 @@ const RegisterPage: React.FC = () => {
 
     return (
         <div className="page-container">
-            <ArrowLeftOutlined className="back-arrow" onClick={() => console.log('Voltar clicado')} />
+            <ArrowLeftOutlined className="back-arrow" onClick={() => navigate('/')} />
             <form onSubmit={handleSubmit}>
                 <h2>Registrar Abrigo</h2>
                 {error && <p className="error">{error}</p>}
