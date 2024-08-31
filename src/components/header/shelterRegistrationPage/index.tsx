@@ -9,12 +9,12 @@ const RegisterPage: React.FC = () => {
     const [senha, setSenha] = useState<string>('');
     const [numero, setNumero] = useState<string>('');
     const [complemento, setComplemento] = useState<string>('');
-    const [endereco,setEndereco] = useState<string>('');
+    const [endereco, setEndereco] = useState<string>('');
     const [error, setError] = useState<string | null>(null);
-    
+
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        if (!nome || !email || !senha || !numero || !endereco)  {
+        if (!nome || !email || !senha || !numero || !endereco) {
             setError('Todos os campos são obrigatórios');
             return;
         }
@@ -22,7 +22,7 @@ const RegisterPage: React.FC = () => {
         console.log('Nome:', nome);
         console.log('Email:', email);
         console.log('Senha:', senha);
-        console.log('Número de telefone:',numero)
+        console.log('Número de telefone:', numero)
         console.log('Endereço', endereco)
         console.log('complemento', complemento)
         setNome('');
@@ -54,7 +54,7 @@ const RegisterPage: React.FC = () => {
                     />
                 </div>
                 <div className="form-group">
-                <Input
+                    <Input
                         id="numero"
                         value={numero}
                         onChange={(e) => setNumero(e.target.value)}
@@ -72,7 +72,7 @@ const RegisterPage: React.FC = () => {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="Digite seu email"
-                    
+
                         style={{
                             height: '50px',
                             fontSize: '16px',
@@ -86,7 +86,7 @@ const RegisterPage: React.FC = () => {
                         value={endereco}
                         onChange={(e) => setEndereco(e.target.value)}
                         placeholder="Digite seu endereço"
-                       
+
                         style={{
                             height: '50px',
                             fontSize: '16px',
@@ -100,7 +100,7 @@ const RegisterPage: React.FC = () => {
                         value={endereco}
                         onChange={(e) => setComplemento(e.target.value)}
                         placeholder="Digite seu complemento"
-                        
+
                         style={{
                             height: '50px',
                             fontSize: '16px',
@@ -131,8 +131,8 @@ const RegisterPage: React.FC = () => {
                         height: '50px',
                         fontSize: '21px',
                         fontWeight: 'bold',
-                        width:'100%',
-                        marginBottom:'40px'
+                        width: '100%',
+                        marginBottom: '40px'
                     }}
                 >
                     Registrar
