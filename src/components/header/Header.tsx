@@ -19,7 +19,7 @@ export function Header({ isVisible }: HeaderProps) {
           <>
             <p className="secText">Você é um abrigo?</p>
             <div className="buttons">
-              <Button style={{ borderColor: 'blue', color: 'blue', marginTop: 0 }} size="large" onClick={() => navigate('/login')}>Entrar</Button>
+              <Button style={{ borderColor: 'blue', color: 'blue', marginTop: 0, marginRight: '5%' }} size="large" onClick={() => navigate('/login')}>Entrar</Button>
               <Button style={{ borderColor: 'blue', color: 'blue', marginTop: 0 }} size="large" onClick={() => navigate('register-shelter')} >Cadastre-se</Button>
             </div>
           </>
