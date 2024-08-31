@@ -1,0 +1,40 @@
+.abrigo-info-container {
+    padding: 20px;
+}
+
+.back-button {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.abrigo-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.abrigo-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.left-section,
+.right-section {
+    width: 45%;
+}
+
+.left-section p,
+.right-section p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.left-section strong,
+.right-section strong {
+    font-weight: bold;
+    font-size: 18px;
+}

@@ -8,7 +8,7 @@ interface HeaderProps {
   onClickRegister: string;
 }
 
-function Header({ isVisible }: HeaderProps) {
+export function Header({ isVisible }: HeaderProps) {
   return (
     <header className="layout">
       <p className="mainText">Abriga-se</p>
