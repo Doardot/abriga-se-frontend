@@ -1,28 +1,30 @@
 import React from "react";
-import './Index.css';
+import "./Index.css";
 import { Button } from "antd";
 
-function Header() {
-    
-    
-    
-    return(
-        <div className={"layout"}>
-            <p className="mainText">Abriga-se</p>
-            
-            <div className="buttons">
-                <Button size="large" >Entrar</Button>
-                <Button size="large" >Cadastra-se</Button>
-            </div>
-
-
-        </div>
-
-
-    );
+interface HeaderProps {
+  isVisible: boolean;
+  onClickLogin: string;
+  onClickRegister: string;
 }
 
+function Header({ isVisible }: HeaderProps) {
+  return (
+    <header className="layout">
+      <p className="mainText">Abriga-se</p>
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        {isVisible && (
+          <>
+            <p className="secText">Você é um abrigo?</p>
+            <div className="buttons">
+              <Button style={{borderColor: 'blue', color: 'blue'}} size="large">Entrar</Button>
+              <Button style={{borderColor: 'blue', color: 'blue'}} size="large">Cadastra-se</Button>
+            </div>
+          </>
+        )}
+      </div>
+    </header>
+  );
+}
 
-
-
-export default Header
+export default Header;
