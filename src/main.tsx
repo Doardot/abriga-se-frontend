@@ -7,7 +7,8 @@ import Router from "./router.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
 
-  <ConfigProvider>
-    <Router />
-  </ConfigProvider>
+  // <ConfigProvider>
+  //   <Router />
+  // </ConfigProvider>
+  <App></App>
 );
