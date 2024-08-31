@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Modal, Button, Table } from 'antd';
 import './index.css';
 import pessoas from '../../api/api.json';
+import { useNavigate } from 'react-router-dom';
 
 interface Pessoa {
   key: string;
@@ -11,6 +12,7 @@ interface Pessoa {
 
 const ModalPessoas: React.FC = () => {
   const [visible, setVisible] = useState(false);
+  const navigate = useNavigate();
 
   // Definição das colunas da tabela
   const columns = [
@@ -29,7 +31,11 @@ const ModalPessoas: React.FC = () => {
       key: 'informacoes',
       // SUBSTITUIR PELO BOTAO VER ABRIGO
       render: (_: any, record: Pessoa) => (
-        <Button className="ver-abrigo-btn">Ver abrigo</Button>
+        <Button
+          className="ver-abrigo-btn"
+          onClick={() => navigate('/abrigoinfo/' + record.key)}
+        >
+          Ver abrigo</Button>
       ),
     },
   ];
