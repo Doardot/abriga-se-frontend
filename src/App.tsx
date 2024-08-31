@@ -1,11 +1,6 @@
-import { useState } from 'react'
 import { Flex } from "antd";
 import Router from './router.tsx'
 import './App.css'
-import Header from './components/header/Header'
-import LoginPage from './components/header/loginPage/index.tsx'
-import { LandingPage } from './api/landing-page/pages/LandingPage'
-import ModalPessoas from './components/ModalPessoas'
 
 function App() {
   return (

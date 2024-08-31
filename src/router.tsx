@@ -1,25 +1,17 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AbrigoInfo from "./components/AbrigoInfo";
-// import { Header } from "../components/header";
+import LoginPage from "./modules/loginPage";
 import ModalPessoas from "./components/ModalPessoas";
-
-
-const Home: React.FC = () => (
-    <div>
-        <h1>Bem-vindo à Página Inicial</h1>
-        <ModalPessoas />
-    </div>
-);
+import { LandingPage } from "./modules/landing-page/pages/LandingPage";
 
 
 function Router() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Home />} />
-                {/* <Route path="/login" element={<Login />} /> */}
+                <Route path="/" element={<LandingPage />} />
+                {<Route path="/login" element={<LoginPage />} />}
                 <Route path="/abrigoinfo/:id" element={<AbrigoInfo />} />
-                <Route path="/modalpessoas" element={<ModalPessoas />} />
             </Routes>
         </BrowserRouter>
     );

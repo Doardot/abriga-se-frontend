@@ -25,7 +25,7 @@ const LoginPage: React.FC = () => {
         <div className="page-container">
             <ArrowLeftOutlined className="back-arrow" onClick={() => console.log('Voltar clicado')} />
             <div className="login-container">
-                
+
                 <h2>Login</h2>
                 {error && <p className="error">{error}</p>}
                 <form onSubmit={handleSubmit}>

@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Modal, Button, Table } from 'antd';
-import './index.css';
-import pessoas from '../../api/api.json';
 import { useNavigate } from 'react-router-dom';
+import pessoas from '../../api/api.json';
 
 interface Pessoa {
   key: string;
@@ -10,11 +9,14 @@ interface Pessoa {
   idade: number;
 }
 
-const ModalPessoas: React.FC = () => {
-  const [visible, setVisible] = useState(false);
+interface ModalPessoasProps {
+  visible: boolean;
+  setVisible: (visible: boolean) => void;
+}
+
+const ModalPessoas: React.FC<ModalPessoasProps> = ({ visible, setVisible }) => {
   const navigate = useNavigate();
 
-  // Definição das colunas da tabela
   const columns = [
     {
       title: 'Nome',
@@ -29,47 +31,37 @@ const ModalPessoas: React.FC = () => {
     {
       title: 'Informações',
       key: 'informacoes',
-      // SUBSTITUIR PELO BOTAO VER ABRIGO
       render: (_: any, record: Pessoa) => (
         <Button
           className="ver-abrigo-btn"
           onClick={() => navigate('/abrigoinfo/' + record.key)}
         >
-          Ver abrigo</Button>
+          Ver abrigo
+        </Button>
       ),
     },
   ];
 
   return (
-    <>
-      <Button
-        type="primary"
-        onClick={() => setVisible(true)}>
-        Abrir Modal
-      </Button>
-      <Modal
-        title={<span className="modal-title">
-          Lista de pessoas
-        </span>}
-        visible={visible}
-        onCancel={() => setVisible(false)}
-        footer={[
-          <Button
-            key="Cancelar "
-            onClick={() => setVisible(false)}
-            className="botao-cancelar">
-            Cancelar
-          </Button>,
-        ]}
-      >
-        <div className="table-container">
-          <Table
-            columns={columns}
-            dataSource={pessoas}
-            pagination={false} />
-        </div>
-      </Modal>
-    </>
+    <Modal
+      title="Lista de pessoas"
+      visible={visible}
+      onCancel={() => setVisible(false)}
+      footer={[
+        <Button
+          key="cancelar"
+          onClick={() => setVisible(false)}
+        >
+          Cancelar
+        </Button>,
+      ]}
+    >
+      <Table
+        columns={columns}
+        dataSource={pessoas}
+        pagination={false}
+      />
+    </Modal>
   );
 };
 
