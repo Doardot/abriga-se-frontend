@@ -1,0 +1,22 @@
+.mainText{
+    font-family: 'Raleway';
+    font-size: 64px;
+}
+
+.layout{
+    width: 100%;
+    border-color: aqua;
+    border-width: 5px;
+    border-style: solid;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    
+    
+}
+
+.buttons{
+    display: flex;
+    gap: 10px; 
+    justify-content: flex-end;
+}
