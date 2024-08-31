@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Modal, Button, Table } from 'antd';
 import './index.css';
+import pessoas from '../../api/api.json';
 
 interface Pessoa {
   key: string;
@@ -10,20 +11,6 @@ interface Pessoa {
 
 const ModalPessoas: React.FC = () => {
   const [visible, setVisible] = useState(false);
-
-  // Dados mockados
-  const pessoas: Pessoa[] = [
-    {
-      key: '1',
-      nome: 'Eduardo Augusto Nascimento',
-      idade: 30,
-    },
-    {
-      key: '2',
-      nome: 'Eduardo Augusto Nascimento',
-      idade: 45,
-    },
-  ];
 
   // Definição das colunas da tabela
   const columns = [
@@ -49,24 +36,31 @@ const ModalPessoas: React.FC = () => {
 
   return (
     <>
-      <Button type="primary" onClick={() => setVisible(true)}>
+      <Button
+        type="primary"
+        onClick={() => setVisible(true)}>
         Abrir Modal
       </Button>
       <Modal
-        title={<span className="modal-title">Lista de pessoas</span>}
+        title={<span className="modal-title">
+          Lista de pessoas
+        </span>}
         visible={visible}
         onCancel={() => setVisible(false)}
         footer={[
-          <Button key="cancel" onClick={() => setVisible(false)} className="footer-btn">
+          <Button
+            key="Cancelar "
+            onClick={() => setVisible(false)}
+            className="botao-cancelar">
             Cancelar
-          </Button>,
-          <Button key="confirm" type="primary" onClick={() => setVisible(false)} className="footer-btn">
-            Confirmar
           </Button>,
         ]}
       >
         <div className="table-container">
-          <Table columns={columns} dataSource={pessoas} pagination={false} />
+          <Table
+            columns={columns}
+            dataSource={pessoas}
+            pagination={false} />
         </div>
       </Modal>
     </>
