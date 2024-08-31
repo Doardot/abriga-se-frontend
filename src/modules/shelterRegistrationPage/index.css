@@ -9,48 +9,35 @@
     background-color: #ffffff;
 }
 
-.login-container {
-    width: 100%;
-    padding: 2%;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0%;
-    margin-bottom: 5%;
-    position: relative;
-}
-
-
 h2 {
     font-family: "Raleway", sans-serif;
-    font-size: 48px;
+    font-size: 32px;
     font-weight: bold;
-    margin-bottom: 17%;
+    margin-bottom: 2rem;
 }
 
 .form-group {
-    margin-bottom: 2%;
+    margin-bottom: 1rem;
     width: 100%;
 }
 
 label {
     display: block;
-    margin-bottom: 1%;
+    margin-bottom: 0.5rem;
 }
 
-input {
+input,
+.ant-input-password {
     width: 100%;
-    padding: 1%;
+    padding: 0.75rem;
     border: 1px solid #ccc;
     border-radius: 4px;
+    box-shadow: none;
+    /* Remove shadow from input fields */
 }
 
 button {
-    padding: 1% 2%;
+    padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 4px;
     background-color: #007bff;
@@ -65,20 +52,22 @@ button:hover {
 
 .error {
     color: red;
-    margin-bottom: 1%;
+    margin-bottom: 1rem;
 }
 
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    max-width: 400px;
+    /* Ajusta a largura máxima do formulário */
 }
 
 .back-arrow {
-    top: 4%;
-    margin-top: 1%;
     position: absolute;
-    left: 3%;
+    top: 2%;
+    left: 2%;
     font-size: 24px;
     cursor: pointer;
 }
